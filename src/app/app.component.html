@@ -1,8 +1,22 @@
 <mat-toolbar color="primary">
-
- 
-  <button mat-button routerLink="/users" color="white">Korisnici</button>
-
   
+  <button *ngIf="loggedIn"  mat-button  routerLink="/contacts" color="white"><mat-icon> contacts</mat-icon>  Add Contacts</button>
+  <button *ngIf="loggedIn"  mat-button routerLink="/users" color="white">Users</button>
+  <button *ngIf="loggedIn"  mat-button routerLink="/contactslist" color="white">Contacts List</button>
+  <div class="example-button-container">
+  
+  </div>
+  <span class="fil-space"></span>
+  <p>{{currentUser?.username}}</p>
+  &nbsp;&nbsp;
+  <button *ngIf="!loggedIn" mat-raised-button color="white" (click)="openLoginDialog()"> Login</button>
+  <button *ngIf="loggedIn" mat-raised-button color="white" [matMenuTriggerFor]="menu">Options</button>
+  <mat-menu #menu="matMenu">
+    <button mat-button color="primary" >Change password</button>
+    <br>
+    <button mat-button color="primary" (click)="odjava()">Logout</button>
+  </mat-menu>
+
 </mat-toolbar>
 <router-outlet></router-outlet>
+

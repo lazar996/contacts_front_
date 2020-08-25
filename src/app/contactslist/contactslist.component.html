@@ -1,11 +1,11 @@
 <mat-list class="container">
         
-    <mat-list-item *ngFor="let user of users">
+    <mat-list-item *ngFor="let contactLists of contactList">
     
                     <mat-icon mat-list-icon>
                             assignment_ind
                 </mat-icon>
-    <h4 mat-line>{{user.username}}</h4>
+    <h4 mat-line>{{contactLists.firstName}}  {{contactLists.lastName}}</h4>
   
     <span class="example-spacer"></span>
     <button mat-icon-button color="primary">
@@ -18,3 +18,4 @@
     
     </mat-list-item>
     </mat-list>
+  

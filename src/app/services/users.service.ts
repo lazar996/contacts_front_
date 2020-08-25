@@ -8,6 +8,7 @@ export class UsersService {
 
   constructor(private _http: HttpClient) { }
 
+  
   getUsers(){
 
     return this._http.get<Users[]> ('http://localhost:8080/api/user');

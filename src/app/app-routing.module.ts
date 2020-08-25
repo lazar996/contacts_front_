@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserComponent } from '../app/user/user.component';
+import { UsersComponent } from './users/users.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { ContactslistComponent } from './contactslist/contactslist.component';
+
 const routes: Routes = [
-  {path: 'users', component: UserComponent}
+
+  {path: 'users', component: UsersComponent},
+  {path: 'contacts', component: ContactsComponent},
+  {path: 'contactslist', component: ContactslistComponent}
 ];
 
 @NgModule({
