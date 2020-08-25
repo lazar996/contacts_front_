@@ -1,4 +1,3 @@
-
 export interface Users {
     user_id :number,
     typeUser:string,
@@ -7,5 +6,6 @@ export interface Users {
     firstName:string,
     lastName:string
     
+        
         
 }

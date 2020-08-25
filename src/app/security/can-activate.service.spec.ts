@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UsersService } from './users.service';
+import { CanActivateService } from './can-activate.service';
 
-describe('UsersService', () => {
+describe('CanActivateService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: UsersService = TestBed.get(UsersService);
+    const service: CanActivateService = TestBed.get(CanActivateService);
     expect(service).toBeTruthy();
   });
 });

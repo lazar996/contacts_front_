@@ -3,11 +3,11 @@ import { Users } from '../interface/users';
 import { UsersService } from  '../services/users.service'
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
 })
-export class UserComponent implements OnInit {
+export class UsersComponent implements OnInit {
 
   constructor(private usersService: UsersService) { }
 
@@ -32,6 +32,4 @@ export class UserComponent implements OnInit {
     )
 
   }
- 
-
 }

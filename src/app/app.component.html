@@ -1,8 +1,20 @@
 <mat-toolbar color="primary">
 
  
-  <button mat-button routerLink="/users" color="white">Korisnici</button>
+  <button *ngIf="loggedIn"  mat-button routerLink="/users" color="white">Korisnici</button>
 
   
+  <span class="fil-space"></span>
+  <p>{{currentUser?.username}}</p>
+  &nbsp;&nbsp;
+  <button *ngIf="!loggedIn" mat-raised-button color="white" (click)="openLoginDialog()"> Login</button>
+  <button *ngIf="loggedIn" mat-raised-button color="white" [matMenuTriggerFor]="menu">Opcije</button>
+  <mat-menu #menu="matMenu">
+    <button mat-button color="primary" >Promena lozinke</button>
+    <br>
+    <button mat-button color="primary" (click)="odjava()">Odjava</button>
+  </mat-menu>
+
 </mat-toolbar>
+<router-outlet></router-outlet>
 <router-outlet></router-outlet>

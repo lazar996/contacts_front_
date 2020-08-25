@@ -1,17 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatDialogModule} from '@angular/material/dialog'
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material.module';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { MaterialModule } from './material.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { UsersComponent } from './users/users.component';
+import { LoginDialog } from './dialog/login.dialog';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UsersComponent,
+    LoginDialog,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -20,9 +24,12 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     HttpClientModule,
     FormsModule, 
-    MatDialogModule
+
+    
+    
   ],
-  providers: [],
+  entryComponents:[LoginDialog],
+  providers:[HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
