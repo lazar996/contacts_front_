@@ -1,8 +1,11 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+<<<<<<< HEAD
     "experimentalDecorators": true,
    
+=======
+>>>>>>> 441d37ad60e26c0ca17bdf476e3074cfd4366fdb
     "outDir": "../out-tsc/spec",
     "types": [
       "jasmine",
