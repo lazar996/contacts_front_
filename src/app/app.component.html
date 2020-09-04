@@ -1,5 +1,4 @@
 <mat-toolbar color="primary">
-<<<<<<< HEAD
   
   <button *ngIf="loggedIn"  mat-button  routerLink="/contacts" color="white"><mat-icon> contacts</mat-icon>  Add Contacts</button>
   <button *ngIf="loggedIn"  mat-button routerLink="/users" color="white">Users</button>
@@ -7,36 +6,22 @@
   <div class="example-button-container">
   
   </div>
-=======
-
  
-  <button *ngIf="loggedIn"  mat-button routerLink="/users" color="white">Korisnici</button>
 
-  
->>>>>>> 441d37ad60e26c0ca17bdf476e3074cfd4366fdb
   <span class="fil-space"></span>
   <p>{{currentUser?.username}}</p>
   &nbsp;&nbsp;
   <button *ngIf="!loggedIn" mat-raised-button color="white" (click)="openLoginDialog()"> Login</button>
-<<<<<<< HEAD
+
   <button *ngIf="loggedIn" mat-raised-button color="white" [matMenuTriggerFor]="menu">Options</button>
   <mat-menu #menu="matMenu">
     <button mat-button color="primary" >Change password</button>
     <br>
     <button mat-button color="primary" (click)="odjava()">Logout</button>
-=======
-  <button *ngIf="loggedIn" mat-raised-button color="white" [matMenuTriggerFor]="menu">Opcije</button>
-  <mat-menu #menu="matMenu">
-    <button mat-button color="primary" >Promena lozinke</button>
-    <br>
-    <button mat-button color="primary" (click)="odjava()">Odjava</button>
->>>>>>> 441d37ad60e26c0ca17bdf476e3074cfd4366fdb
+
   </mat-menu>
 
 </mat-toolbar>
 <router-outlet></router-outlet>
-<<<<<<< HEAD
 
-=======
 <router-outlet></router-outlet>
->>>>>>> 441d37ad60e26c0ca17bdf476e3074cfd4366fdb
